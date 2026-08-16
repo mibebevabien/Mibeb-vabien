@@ -1,208 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema Mi Bebé Va Bien | Desarrollo Infantil de 0 a 60 Meses</title>
-    <!-- Tailwind CSS CDN -->
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=qc22rMy0vahsB3XmddGYAaDcPzie7JKmM5mj0DkUq9qe0olGOxvLFfFMBV7PihFSDIAFh7LbpnVFa87oyENr3qni_7M2t5ZxaEEnt1qjajaN38OirBtMRFi0usOMrLGHPTyw60gUWVWQFyUWq5aOCKbkvAJxQzqpujAPDfn3gowRosmad7zpeLEfTnly4TNKnyedKOCh90zaYxfAwo1dRy32cX6TweasADUlryYxcgdxSn5VVZKOlMTfHI9atLgmhoUXYVl3lrLKq9a86Y0e6z5qLckrJGUojlfq-eN-RH1RjZKvmiDhpZyLyO8Xv2mF" charset="UTF-8"></script><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Montserrat Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tailwind CSS vía CDN -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=uFmBldEZ_GeZ9Nk4fDDOGfGj_CEVwoMDAFl5GJRLDhjj-r_ToRn9hBZDp14vXzibvmUO-9RTJj7bHbYYtGbc1QoAlalIqFfKas0QaZYBTscHSdaGoMV7yFyh1EbyEiVtZUX5bQQL2b20oo4teRN9pz4XcOj4yNcPfqDHFqkYpnXYsY_t0Sx4PxPYegcZrbQ_Y95K55pXBggog8jcW1O0l6G50EyJWZWxRp7FZ3nXed6yvdLlSvOr2MbRW2tQzM-Tv22qwSPNl6kTwwqlIM1Td0fDQrkASkh3uWqmP39iqlS-HsQ82bqz-W8jT1kUbMDj" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        teal: { 500: '#14b8a6', 600: '#0d9488' },
+                        slate: { 900: '#0f172a', 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; }
+        .price-tag { color: #14b8a6; font-weight: 800; }
     </style>
 </head>
-<body class="font-sans antialiased bg-slate-950 text-slate-100 selection:bg-teal-500 selection:text-white">
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center shadow-md relative z-50">
-        <div class="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-            <span class="bg-amber-400 text-slate-950 px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse">¡Oferta Especial por Tiempo Limitado!</span>
-            <span>Acceso inmediato al Sistema Completo + 5 Bonos Exclusivos con 80% de Descuento.</span>
-            <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200 transition-colors ml-1">¡Quiero mi descuento!</a>
-        </div>
-    </div>
+<body class="bg-slate-950 text-slate-100 antialiased">
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-cyan-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-teal-500/20">
-                    👶
-                </div>
-                <div>
-                    <span class="font-extrabold text-lg text-white tracking-tight block leading-tight">Mi Bebé Va Bien</span>
-                    <span class="text-[10px] text-teal-400 font-semibold tracking-wider uppercase block">Desarrollo Infantil 0-60 Meses</span>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-                <a href="#beneficios" class="hover:text-teal-400 transition-colors">Beneficios</a>
-                <a href="#mini-app" class="hover:text-teal-400 transition-colors">Mini-App Interactiva</a>
-                <a href="#bonos" class="hover:text-teal-400 transition-colors">Bonos</a>
-                <a href="#precio" class="hover:text-teal-400 transition-colors">Precio</a>
-                <a href="#faq" class="hover:text-teal-400 transition-colors">Preguntas Frecuentes</a>
-            </div>
-            <div>
-                <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold px-4 py-2 rounded-xl shadow-lg shadow-teal-500/20 transition-all text-sm flex items-center gap-2">
-                    <span>Acceder Ahora</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- Header / Nav -->
+    <nav class="p-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-white">Sistema Mi Bebé Va Bien</h1>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-16 pb-24 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.1),transparent_50%)]"></div>
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-semibold tracking-wide uppercase">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                        <span>Guía Profesional Avalada para Padres</span>
-                    </div>
-                    <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-none">
-                        Descubre el Paso a Paso para Estimular el <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Desarrollo de tu Hijo</span> de 0 a 60 Meses
-                    </h1>
-                    <p class="text-slate-300 text-lg md:text-xl font-normal leading-relaxed">
-                        Evita dudas, detecta hitos a tiempo y potencia su lenguaje, motricidad e inteligencia emocional con un sistema práctico diseñado por expertos en salud infantil.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-teal-500/30 transition-all text-center flex items-center justify-center gap-3 text-lg">
-                            <span>Obtener el Sistema Completo</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center lg:justify-start gap-6 pt-4 text-xs text-slate-400">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i>
-                            <span>Acceso Inmediato 100% Digital</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i>
-                            <span>Garantía de Satisfacción</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-5">
-                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl shadow-teal-500/10 relative">
-                        <div class="absolute -top-3 -right-3 bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full shadow-lg uppercase tracking-wider">
-                            80% OFF Hoy
-                        </div>
-                        <div class="space-y-4">
-                            <div class="w-full h-56 rounded-2xl bg-gradient-to-tr from-teal-900/40 to-cyan-900/40 border border-teal-500/20 flex flex-col items-center justify-center p-6 text-center">
-                                <span class="text-5xl mb-2">👶📊</span>
-                                <h3 class="font-bold text-white text-lg">Sistema Mi Bebé Va Bien</h3>
-                                <p class="text-xs text-slate-400 mt-1">Guía completa de hitos del desarrollo de 0 a 60 meses + Mini-App Interactiva</p>
-                            </div>
-                            <div class="space-y-2 text-sm text-slate-300">
-                                <div class="flex justify-between py-1 border-b border-slate-800">
-                                    <span class="text-slate-400">Precio Regular:</span>
-                                    <span class="line-through text-slate-500">$97 USD</span>
-                                </div>
-                                <div class="flex justify-between py-1 font-bold text-white text-lg">
-                                    <span class="text-teal-400">Precio Especial:</span>
-                                    <span class="text-teal-400">$17 USD</span>
-                                </div>
-                            </div>
-                            <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold py-3.5 rounded-xl shadow-lg transition-all">
-                                ¡Quiero Acceso Inmediato!
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Sección Hero con Precio Fijo -->
+    <main class="max-w-4xl mx-auto px-6 py-12 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Transforma el desarrollo de tu hijo</h2>
+        <p class="text-lg md:text-xl text-slate-300 mb-10">La guía definitiva para entender y potenciar cada etapa de tu bebé de 0 a 60 meses.</p>
 
-    <!-- Benefits Section -->
-    <section id="beneficios" class="py-20 bg-slate-900/50 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                    ¿Qué Incluye el <span class="text-teal-400">Sistema Mi Bebé Va Bien</span>?
-                </h2>
-                <p class="text-slate-300 text-base md:text-lg">
-                    Todo lo que necesitas para acompañar cada etapa de crecimiento con seguridad, amor y fundamento científico.
-                </p>
+        <!-- Bloque de Precio -->
+        <div class="bg-slate-900 border border-teal-500/30 p-8 rounded-2xl shadow-2xl inline-block">
+            <p class="text-slate-400 uppercase tracking-widest text-sm mb-2">Inversión única por tiempo limitado</p>
+            <div class="flex items-center justify-center gap-2">
+                <span class="text-2xl">$</span>
+                <span class="text-6xl price-tag">24,90</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
-                        📈
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Guía de Hitos por Edades</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Desglose mes a mes (de 0 a 60 meses) en áreas motora, lenguaje, cognitiva y socioemocional para saber exactamente qué esperar en cada etapa.
-                    </p>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
-                        💡
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Actividades de Estimulación</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Ejercicios prácticos y juegos sencillos con materiales que ya tienes en casa para potenciar el desarrollo cerebral y físico de tu hijo.
-                    </p>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 hover:border-teal-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl">
-                        📱
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Mini-App Interactiva</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Herramienta digital para evaluar y registrar el progreso de tu pequeño de forma rápida, intuitiva y organizada desde cualquier dispositivo.
-                    </p>
-                </div>
-            </div>
+            <p class="text-sm text-slate-500 mt-4">Acceso inmediato y de por vida</p>
+            
+            <a href="https://pay.hotmart.com/W107185007O" target="_blank" 
+               class="mt-8 block bg-teal-600 hover:bg-teal-500 text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-lg shadow-teal-900/50">
+                QUIERO ACCEDER AHORA
+            </a>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="precio" class="py-20 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border-2 border-teal-500/40 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-bl-2xl uppercase tracking-wider">
-                    Oferta Exclusiva
-                </div>
-                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Acceso Total al Sistema</h2>
-                <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-                    Obtén la guía completa, los 5 bonos exclusivos y la mini-app de seguimiento por un único pago irrepetible.
-                </p>
-                <div class="flex items-center justify-center gap-4 mb-8">
-                    <span class="text-2xl text-slate-500 line-through">$97 USD</span>
-                    <span class="text-5xl md:text-6xl font-black text-teal-400">$17 USD</span>
-                </div>
-                <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-extrabold px-10 py-5 rounded-2xl shadow-xl shadow-teal-500/30 text-xl transition-all mb-4">
-                    ¡Quiero Comprar Ahora con 80% OFF!
-                </a>
-                <p class="text-xs text-slate-400 flex items-center justify-center gap-2">
-                    <i data-lucide="lock" class="w-3.5 h-3.5 text-teal-400"></i>
-                    <span>Pago 100% seguro a través de plataforma oficial. Acceso inmediato.</span>
-                </p>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-slate-400 text-sm">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            <div>
-                <span class="font-bold text-white text-base block">Mi Bebé Va Bien</span>
-                <p class="text-xs text-slate-500 mt-1">Todos los derechos reservados. Desarrollado con ❤️ para padres conscientes.</p>
-            </div>
-            <div class="flex items-center gap-6 text-xs">
-                <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors">Términos y Condiciones</a>
-                <a href="https://payhip.com/recursossaludybienestar" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors">Soporte</a>
-            </div>
-        </div>
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Ayuda Autista - Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
