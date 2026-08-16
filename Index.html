@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Mi Bebé Va Bien | Desarrollo Infantil de 0 a 60 Meses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Montserrat Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .animate-pulse-glow { animation: pulseGlow 2.5s infinite ease-in-out; }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(20, 184, 166, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(20, 184, 166, 0.8); }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-white">
+
+    <!-- Top Announcement -->
+    <div class="bg-teal-700 py-2 text-center text-sm font-semibold tracking-wide">
+        🚀 OFERTA ESPECIAL: Acceso completo al sistema por tiempo limitado
+    </div>
+
+    <!-- Hero Section -->
+    <header class="container mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-6">Mi Bebé Va Bien</h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto">
+            El sistema definitivo para monitorear y potenciar el desarrollo infantil de 0 a 60 meses.
+        </p>
+        <a href="https://pay.hotmart.com/W107185007O" target="_blank" class="inline-block bg-teal-500 hover:bg-teal-400 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg animate-pulse-glow transition-all">
+            Obtener acceso hoy por solo 24,90
+        </a>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="container mx-auto px-6 py-16 bg-slate-900 rounded-3xl my-16 text-center">
+        <h2 class="text-3xl font-bold mb-6">Tu inversión en el futuro de tu bebé</h2>
+        <div class="text-6xl font-black text-teal-400 mb-4">24,90</div>
+        <p class="text-slate-400 mb-8">Pago único, acceso ilimitado de por vida.</p>
+        <a href="https://pay.hotmart.com/W107185007O" target="_blank" class="inline-block bg-white text-slate-950 font-bold py-4 px-10 rounded-full text-lg hover:bg-slate-200 transition-all">
+            Comprar Ahora
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-8 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Ayuda Autista. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Floating Mobile Button -->
+    <div class="fixed bottom-6 left-6 right-6 md:hidden">
+        <a href="https://pay.hotmart.com/W107185007O" target="_blank" class="block w-full bg-teal-500 text-white font-bold py-4 rounded-xl text-center shadow-2xl">
+            Comprar por 24,90
+        </a>
+    </div>
+
+</body>
+</html>
