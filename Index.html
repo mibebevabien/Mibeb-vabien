@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bebé Va Bien | Guía Completa de Desarrollo Infantil (0 a 60 meses)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#151c2e',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(45, 212, 191, 0.6); }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 3s infinite;
+        }
+        @keyframes bounceShort {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-bounce-short {
+            animation: bounceShort 3s infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-950">
+
+    <!-- 1. Urgency Countdown Top Bar -->
+    <div id="top-bar" class="bg-gradient-to-r from-amber-500 via-teal-600 to-emerald-600 text-white text-xs sm:text-sm font-bold py-2 px-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 mx-auto sm:mx-0">
+                <span class="flex items-center gap-1 bg-amber-400 text-slate-950 text-[11px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse">
+                    🔥 75% OFF
+                </span>
+                <span class="hidden sm:inline">¡Oferta Especial de Lanzamiento por tiempo limitado!</span>
+                <span class="sm:hidden">¡Oferta Especial por tiempo limitado!</span>
+            </div>
+            <div class="flex items-center gap-3 mx-auto sm:mx-0">
+                <div class="flex items-center gap-1 bg-black/25 px-2.5 py-0.5 rounded-md font-mono text-xs text-amber-200">
+                    ⏱️ <span id="countdown-timer">14:52</span>
+                </div>
+                <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-white text-teal-900 hover:bg-amber-100 font-extrabold px-3 py-1 rounded text-xs transition-transform transform active:scale-95 shadow cursor-pointer flex items-center gap-1">
+                    🛡️ <span>Acceso $24.90 USD</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Brand Sticky Navbar -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-9 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl overflow-hidden border border-teal-500/40 shadow-md group-hover:scale-105 transition-transform bg-white p-0.5 flex items-center justify-center font-black text-teal-600 text-xl">
+                    👶
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg sm:text-xl font-black text-white tracking-tight">
+                            Mi Bebé <span class="text-teal-400">Va Bien</span>
+                        </span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 font-medium hidden sm:block">
+                        Por Ruth Rojas • Desarrollo 0-60 Meses
+                    </p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#problema" class="hover:text-teal-400 transition-colors">¿Tu duda?</a>
+                <a href="#solucion" class="hover:text-teal-400 transition-colors">El Sistema</a>
+                <a href="#beneficios" class="hover:text-teal-400 transition-colors">Beneficios</a>
+                <a href="#demo" class="hover:text-teal-400 transition-colors">Probador MiniApp</a>
+                <a href="#bonos" class="hover:text-teal-400 transition-colors">5 Bonos</a>
+                <a href="#precio" class="hover:text-teal-400 transition-colors">Oferta</a>
+                <a href="#faq" class="hover:text-teal-400 transition-colors">Preguntas</a>
+            </nav>
+            <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-lg shadow-teal-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5 cursor-pointer">
+                ✨ <span>Acceder por $24.90!</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. Hero Section with High-Converting Direct Hotmart CTAs -->
+    <section class="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-teal-500/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-black px-4 py-1.5 rounded-full shadow-inner">
+                        ⚡ <span>OFERTA ESPECIAL DE LANZAMIENTO - ACCESO INMEDIATO</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+                        ¿Tu hijo se está desarrollando al ritmo adecuado o es <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-teal-300 to-emerald-300">momento de actuar?</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+                        La guía completa y el sistema interactivo de <strong class="text-white font-bold">0 a 60 meses (5 años)</strong> por <span class="text-teal-300 font-bold">Ruth Rojas</span> para acompañar su crecimiento con base científica, detectar alertas a tiempo y recuperar la paz mental en tu crianza.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                            <span class="text-teal-400 font-bold">✓</span> Hitos clave mes a mes (0 a 60m)
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                            <span class="text-teal-400 font-bold">✓</span> Señales de alerta vs ritmo normal
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                            <span class="text-teal-400 font-bold">✓</span> MiniApp interactiva para tu celular
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                            <span class="text-teal-400 font-bold">✓</span> 5 Bonos Exclusivos de Regalo incluidos
+                        </div>
+                    </div>
+
+                    <!-- Pricing Callout Box -->
+                    <div class="bg-slate-800/80 border border-slate-700/80 p-4 sm:p-5 rounded-2xl max-w-xl mx-auto lg:mx-0 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-slate-400 font-bold uppercase line-through">
+                                    Antes: $97 USD
+                                </span>
+                                <span class="bg-rose-500/20 text-rose-300 text-xs font-black px-2 py-0.5 rounded-md">
+                                    75% DESCUENTO
+                                </span>
+                            </div>
+                            <div class="flex items-baseline gap-2 mt-0.5">
+                                <span class="text-3xl sm:text-4xl font-black text-amber-400">
+                                    $24.90
+                                </span>
+                                <span class="text-xs text-slate-300 font-bold">
+                                    USD / Pago único para siempre
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-right sm:text-right text-xs text-amber-200/90 font-medium flex items-center gap-1.5 bg-amber-500/10 px-3 py-2 rounded-xl border border-amber-500/20">
+                            ⭐ Quedan solo <strong>7 accesos</strong> con bonos incluidos
+                        </div>
+                    </div>
+
+                    <!-- Hero CTA -->
+                    <div class="space-y-3 max-w-xl mx-auto lg:mx-0">
+                        <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-teal-400 hover:from-amber-300 hover:to-teal-300 text-slate-950 font-black text-lg sm:text-xl py-4 sm:py-5 px-6 rounded-2xl shadow-2xl shadow-amber-500/25 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer group uppercase tracking-wide border-2 border-white/40 animate-pulse-glow">
+                            <span>¡QUIERO ACCESO POR SOLO $24.90 USD!</span>
+                            <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-400 pt-1">
+                            <span class="flex items-center gap-1">🔒 Pago 100% Seguro por Hotmart</span>
+                            <span class="flex items-center gap-1">⚡ Acceso Inmediato</span>
+                            <span class="flex items-center gap-1">⭐ Garantía de 7 Días</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="block relative rounded-3xl overflow-hidden border-2 border-slate-700 bg-slate-900 shadow-2xl group cursor-pointer p-8 text-center">
+                            <div class="py-12 px-4 bg-gradient-to-br from-teal-950/60 to-slate-900 rounded-2xl border border-teal-500/30 mb-4">
+                                <span class="text-6xl mb-4 block">📚👶✨</span>
+                                <h3 class="text-xl font-black text-white mb-2">Mi Bebé Va Bien</h3>
+                                <p class="text-xs text-teal-300 font-semibold">Sistema Completo 0 a 60 Meses + MiniApp + 5 Bonos</p>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 bg-slate-950/85 backdrop-blur-md border border-slate-700/80 rounded-xl p-3 flex items-center justify-between text-xs text-white">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                    <span class="font-bold">Ebook + 5 Bonos + MiniApp</span>
+                                </div>
+                                <span class="text-amber-300 font-extrabold bg-amber-500/20 px-2 py-0.5 rounded">Pack Completo</span>
+                            </div>
+                        </a>
+                        <div class="absolute -top-4 -left-2 bg-teal-500 text-slate-950 font-black text-xs px-3.5 py-1.5 rounded-full shadow-lg border border-teal-300 flex items-center gap-1.5">
+                            ⭐ Edición Oficial 0-60 Meses
+                        </div>
+                        <div class="absolute -bottom-3 -right-2 bg-amber-400 text-slate-950 font-black text-xs px-3.5 py-1.5 rounded-full shadow-lg border border-amber-200">
+                            PDF + WebApp + 5 Bonos
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Pain Points & Real Parent Challenges -->
+    <section id="problema" class="py-16 sm:py-20 bg-slate-900 border-t border-b border-slate-800 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 bg-rose-500/10 text-rose-400 border border-rose-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ⚠️ <span>La Realidad de la Crianza Actual</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                    ¿Te identificas con alguna de estas situaciones?
+                </h2>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">
+                    Haz clic en las preguntas que resuenan contigo en este momento:
+                </p>
+            </div>
+
+            <!-- Problem Questions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                <div class="p-5 rounded-2xl text-left transition-all flex items-start gap-4 border bg-gradient-to-r from-rose-950/40 to-slate-900 border-rose-500/50 shadow-lg">
+                    <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 bg-rose-500 text-white font-bold text-xs">✓</div>
+                    <p class="text-sm sm:text-base font-medium leading-snug text-white">¿Sientes angustia al no saber si tu bebé está alcanzando los hitos adecuados para su edad?</p>
+                </div>
+                <div class="p-5 rounded-2xl text-left transition-all flex items-start gap-4 border bg-gradient-to-r from-rose-950/40 to-slate-900 border-rose-500/50 shadow-lg">
+                    <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 bg-rose-500 text-white font-bold text-xs">✓</div>
+                    <p class="text-sm sm:text-base font-medium leading-snug text-white">¿Te abruma la sobreinformación en internet con consejos contradictorios y alarmistas?</p>
+                </div>
+                <div class="p-5 rounded-2xl text-left transition-all flex items-start gap-4 border bg-slate-850 border-slate-800 hover:border-slate-700">
+                    <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 bg-slate-800 text-slate-500 border border-slate-700 font-bold text-xs">?</div>
+                    <p class="text-sm sm:text-base font-medium leading-snug text-slate-300">¿La gente a tu alrededor no para de comparar a tu hijo con otros niños de su edad?</p>
+                </div>
+                <div class="p-5 rounded-2xl text-left transition-all flex items-start gap-4 border bg-slate-850 border-slate-800 hover:border-slate-700">
+                    <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 bg-slate-800 text-slate-500 border border-slate-700 font-bold text-xs">?</div>
+                    <p class="text-sm sm:text-base font-medium leading-snug text-slate-300">¿Tienes dudas sobre qué es una variación normal y qué es una señal de alerta real?</p>
+                </div>
+            </div>
+
+            <!-- Storytelling Problem Walkthrough -->
+            <div class="bg-slate-950 rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-800 relative overflow-hidden mb-10">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-2xl">🤝</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white">
+                        No estás sola ni solo: La crianza no debería ser una fuente de ansiedad constante
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/90 border border-slate-800/80 p-5 rounded-2xl">
+                        <div class="w-8 h-8 rounded-full bg-teal-500/10 text-teal-300 font-black text-sm flex items-center justify-center mb-3 border border-teal-500/20">1</div>
+                        <h4 class="font-bold text-white text-base mb-2">La Trampa de las Comparaciones</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Escuchas comentarios como 'mi hijo a su edad ya hablaba o ya caminaba' y sientes un nudo en el estómago preguntándote si algo anda mal.</p>
+                    </div>
+                    <div class="bg-slate-900/90 border border-slate-800/80 p-5 rounded-2xl">
+                        <div class="w-8 h-8 rounded-full bg-teal-500/10 text-teal-300 font-black text-sm flex items-center justify-center mb-3 border border-teal-500/20">2</div>
+                        <h4 class="font-bold text-white text-base mb-2">El Agotador Laberinto de Google</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Buscas un síntoma menor a las 2 a.m. y encuentras diagnósticos extremos que solo aumentan tu ansiedad en lugar de darte respuestas claras.</p>
+                    </div>
+                    <div class="bg-slate-900/90 border border-slate-800/80 p-5 rounded-2xl">
+                        <div class="w-8 h-8 rounded-full bg-teal-500/10 text-teal-300 font-black text-sm flex items-center justify-center mb-3 border border-teal-500/20">3</div>
+                        <h4 class="font-bold text-white text-base mb-2">La Necesidad de Certeza</h4>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Necesitas una referencia estructurada, paso a paso, que te diga con base científica qué esperar mes a mes sin dramas.</p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-800/80 text-center">
+                    <p class="text-slate-300 font-medium text-sm sm:text-base max-w-2xl mx-auto">
+                        Cada niño tiene su propio ritmo biológico, pero tener una brújula estructurada y validada es lo que transforma la duda en seguridad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#solucion" class="bg-teal-600 hover:bg-teal-700 text-white font-extrabold text-base sm:text-lg py-3.5 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-100 cursor-pointer inline-flex items-center gap-2">
+                    <span>Descubre la Solución Paso a Paso</span> →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. The Solution: Complete 0-60m System by Ruth Rojas -->
+    <section id="solucion" class="py-16 sm:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-1.5 bg-teal-500/10 text-teal-400 border border-teal-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ❤️ <span>El Método Definitivo</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                    Presentamos el Sistema Completo <br class="hidden sm:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-teal-300 to-emerald-300">
+                        "Mi Bebé Va Bien" (0 a 60 Meses)
+                    </span>
+                </h2>
+                <p class="text-slate-300 mt-4 text-base sm:text-lg leading-relaxed">
+                    Una solución integral creada por la especialista <strong class="text-teal-300">Ruth Rojas</strong> que une la profundidad de una guía pediátrica completa en PDF con la practicidad de una MiniApp interactiva en tu teléfono.
+                </p>
+            </div>
+
+            <!-- 3 Pillars Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <!-- Pillar 1 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-teal-500/50 transition-colors group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-xl">📖</div>
+                        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Pilar 1</span>
+                        <h3 class="text-xl font-black text-white mt-1 mb-3">Ebook Completo 0-60 Meses</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">La guía estructurada paso a paso que cubre las 4 dimensiones del neurodesarrollo infantil desde los primeros días hasta los 5 años de edad.</p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-4 border-t border-slate-700">
+                        <li class="flex items-center gap-2">✓ Formato PDF descargable e imprimible</li>
+                        <li class="flex items-center gap-2">✓ Explicaciones sin tecnicismos complejos</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-gradient-to-b from-teal-950/40 to-slate-800/80 border-2 border-teal-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-teal-950/30 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-xl">📱</div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">Pilar 2</span>
+                            <span class="bg-amber-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">INTERACTIVO</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white mt-1 mb-3">MiniApp Web Móvil 24/7</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Lleva las respuestas en tu bolsillo. Consulta en segundos el rango de edad exacto de tu bebé, revisa los semáforos y sigue su evolución.</p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-4 border-t border-teal-500/30">
+                        <li class="flex items-center gap-2">✓ Sin instalaciones ni descargas pesadas</li>
+                        <li class="flex items-center gap-2">✓ Funciona en iPhone, Android y PC</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-teal-500/50 transition-colors group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform text-xl">🎁</div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Pilar 3</span>
+                        <h3 class="text-xl font-black text-white mt-1 mb-3">5 Bonos de Regalo Exclusivos</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Herramientas complementarias valoradas en más de $106 USD que recibirás completamente gratis con tu acceso de hoy.</p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 pt-4 border-t border-slate-700">
+                        <li class="flex items-center gap-2">✓ Calendario de Hitos, Checklists y Guía SOS</li>
+                        <li class="flex items-center gap-2">✓ Estimulación práctica y 25 Mitos científicos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Interactive MiniApp Sandbox / Demo -->
+    <section id="demo" class="py-16 sm:py-24 bg-slate-900 border-t border-b border-slate-800 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 bg-amber-400/10 text-amber-300 border border-amber-400/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ✨ <span>Probador Interactivo en Vivo</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                    Prueba cómo funciona la MiniApp Web de "Mi Bebé Va Bien"
+                </h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base">
+                    Selecciona la edad de tu bebé a continuación y experimenta la rapidez con la que obtendrás respuestas certeras:
+                </p>
+            </div>
+
+            <!-- Interactive Simulator Shell -->
+            <div class="bg-slate-950 rounded-3xl border-2 border-teal-500/30 shadow-2xl p-4 sm:p-8 max-w-4xl mx-auto">
+                <div class="mb-6">
+                    <label class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2.5">
+                        1. Selecciona el rango de edad de tu bebé
+                    </label>
+                    <div id="age-tabs" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+                        <button onclick="switchAge('0-3m')" id="btn-0-3m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-gradient-to-b from-teal-500 to-emerald-500 text-slate-950 shadow-lg shadow-teal-500/20 scale-105">
+                            <span>0 a 3 Meses</span>
+                        </button>
+                        <button onclick="switchAge('4-6m')" id="btn-4-6m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800">
+                            <span>4 a 6 Meses</span>
+                        </button>
+                        <button onclick="switchAge('7-9m')" id="btn-7-9m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800">
+                            <span>7 a 9 Meses</span>
+                        </button>
+                        <button onclick="switchAge('10-12m')" id="btn-10-12m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800">
+                            <span>10 a 12 Meses</span>
+                        </button>
+                        <button onclick="switchAge('13-24m')" id="btn-13-24m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800">
+                            <span>1 a 2 Años</span>
+                        </button>
+                        <button onclick="switchAge('25-60m')" id="btn-25-60m" class="age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800">
+                            <span>2 a 5 Años</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Preview Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-teal-400 uppercase tracking-wider">Etapa Seleccionada</span>
+                            <h3 id="preview-label" class="text-xl sm:text-2xl font-black text-white">Recién Nacido a 3 Meses</h3>
+                        </div>
+                        <p id="preview-desc" class="text-xs text-slate-400 max-w-md">Etapa de adaptación al mundo exterior, fijación de mirada y primeros reflejos.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-emerald-950/20 border border-emerald-500/30 rounded-2xl p-4 sm:p-5">
+                            <div class="flex items-center gap-2 text-emerald-400 font-black text-sm mb-3">
+                                ✓ <span>Hitos que deberías observar en esta etapa:</span>
+                            </div>
+                            <ul id="preview-skills" class="space-y-2.5">
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span><span>Sostiene la cabeza momentáneamente al estar boca abajo</span></li>
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span><span>Sigue objetos brillantes y rostros con la mirada</span></li>
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span><span>Sonrisa social en respuesta a la voz de mamá o papá</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-rose-950/20 border border-rose-500/30 rounded-2xl p-4 sm:p-5">
+                            <div class="flex items-center gap-2 text-rose-400 font-black text-sm mb-3">
+                                ⚠ <span>Señales de alerta (consultar con pediatra):</span>
+                            </div>
+                            <ul id="preview-alerts" class="space-y-2.5">
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-rose-200"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span><span>No reacciona a sonidos intensos</span></li>
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-rose-200"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span><span>No fija la mirada ni sigue rostros a corta distancia</span></li>
+                                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-rose-200"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span><span>Cuerpo extremadamente rígido o excesivamente flácido</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 flex items-center gap-3 text-xs text-slate-400">
+                        ℹ️ <span>En la versión completa de la MiniApp tendrás acceso al desglose completo de 0 a 60 meses, estimulación personalizada y checklists interactivos.</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-teal-400 via-emerald-400 to-amber-300 text-slate-950 font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl hover:opacity-95 transition-all cursor-pointer flex items-center justify-center gap-2 uppercase tracking-wide">
+                        📱 <span>OBTENER ACCESO COMPLETO A LA MINIAPP + EBOOK POR $24.90</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Key Benefits & Real Peace of Mind -->
+    <section id="beneficios" class="py-16 sm:py-24 bg-slate-950 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ✨ <span>Transformación Real</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    ¿Qué cambiará en tu vida al tener "Mi Bebé Va Bien"?
+                </h2>
+                <p class="text-slate-400 mt-3 text-base sm:text-lg">
+                    Más que una guía, es la tranquilidad de saber que estás haciendo lo correcto en cada etapa del desarrollo de tu hijo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 flex items-start gap-4 hover:border-teal-500/40 transition-colors">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0 mt-1 border border-teal-500/30 font-bold">✓</div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Claridad Mes a Mes (0 a 60 meses)</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Sabrás con exactitud los hitos motores, de lenguaje, cognitivos y socioemocionales que corresponden a cada etapa.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 flex items-start gap-4 hover:border-teal-500/40 transition-colors">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0 mt-1 border border-teal-500/30 font-bold">✓</div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Diferenciación Clara entre Alerta y Ritmo Normal</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Aprende a distinguir cuándo tener paciencia respetuosa y cuándo consultar oportunamente al pediatra o especialista.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 flex items-start gap-4 hover:border-teal-500/40 transition-colors">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0 mt-1 border border-teal-500/30 font-bold">✓</div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Estimulación Respetuosa y sin Presión</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Actividades prácticas y lúdicas para realizar en casa con materiales cotidianos fortaleciendo el vínculo afectivo.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 flex items-start gap-4 hover:border-teal-500/40 transition-colors">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0 mt-1 border border-teal-500/30 font-bold">✓</div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Tranquilidad Mental para Mamás y Papás</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Recupera la paz en tu crianza sabiendo que cuentas con un respaldo profesional en tu bolsillo en todo momento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-teal-900/50 via-slate-900 to-slate-900 border border-teal-500/30 rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto">
+                <h3 class="text-xl sm:text-2xl font-black text-white mb-2">No dejes la certeza del desarrollo de tu hijo al azar</h3>
+                <p class="text-slate-300 text-sm mb-6 max-w-xl mx-auto">Accede al Ebook completo + la MiniApp móvil + los 5 Bonos Exclusivos hoy mismo por un único pago.</p>
+                <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base sm:text-lg py-3.5 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-100 cursor-pointer inline-flex items-center gap-2 uppercase tracking-wide">
+                    <span>QUIERO MI TRANQUILIDAD HOY POR $24.90</span> →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Detailed Product Stack & 5 Exclusive Bonuses Breakdown -->
+    <section id="bonos" class="py-16 sm:py-24 bg-slate-900 border-t border-b border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 bg-amber-400/10 text-amber-300 border border-amber-400/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+                    🎁 <span>Desglose Detallado de Todo lo que Recibes</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                    El Arsenal Completo para la Seguridad de tu Bebé
+                </h2>
+                <p class="text-slate-300 mt-3 text-base sm:text-lg">
+                    Todo incluido en un solo paquete de acceso vitalicio por solo <span class="text-amber-400 font-bold">$24.90 USD</span>.
+                </p>
+            </div>
+
+            <!-- Ebook Showcase -->
+            <div class="bg-slate-950 rounded-3xl border border-slate-800 p-6 sm:p-10 mb-12 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="relative max-w-xs rounded-2xl overflow-hidden shadow-2xl border-2 border-teal-500/30 bg-slate-900 p-8 text-center">
+                            <span class="text-6xl mb-3 block">📖</span>
+                            <h4 class="text-lg font-bold text-white">Mi Bebé Va Bien</h4>
+                            <p class="text-xs text-teal-300">Guía 0-60 Meses</p>
+                            <div class="absolute top-3 left-3 bg-amber-400 text-slate-950 font-black text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider shadow">Ebook Principal</div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="bg-teal-500/15 text-teal-300 border border-teal-500/30 text-xs font-black px-3 py-1 rounded-full uppercase">COMPONENTE #1</span>
+                            <span class="text-slate-400 text-xs font-bold line-through">Valor Normal: $47 USD</span>
+                            <span class="text-emerald-400 text-xs font-extrabold bg-emerald-500/10 px-2 py-0.5 rounded">INCLUIDO HOY</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">Guía Completa "Mi Bebé Va Bien" (0 a 60 Meses)</h3>
+                        <p class="text-teal-300 font-semibold text-sm">Por Ruth Rojas • Manual exhaustivo en PDF de alta resolución</p>
+                        <div class="space-y-2.5 pt-2">
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Estructura detallada mes a mes desde recién nacido hasta los 5 años (0 a 60 meses).</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ 4 dimensiones clave: Desarrollo Motor, Lenguaje, Cognitivo y Socioemocional.</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Señales de alerta rojas vs. amarillas explicadas con lenguaje cálido y sin tecnicismos.</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Formato PDF de alta resolución listo para leer en celular, tablet, computadora o imprimir.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MiniApp Web Showcase -->
+            <div class="bg-gradient-to-r from-slate-950 via-teal-950/30 to-slate-950 rounded-3xl border-2 border-teal-500/40 p-6 sm:p-10 mb-16 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-black px-3 py-1 rounded-full uppercase">COMPONENTE #2</span>
+                            <span class="text-slate-400 text-xs font-bold line-through">Valor Normal: $37 USD</span>
+                            <span class="text-emerald-400 text-xs font-extrabold bg-emerald-500/10 px-2 py-0.5 rounded">INCLUIDO HOY</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">MiniApp Web Móvil Multi-dispositivo 24/7</h3>
+                        <p class="text-amber-300 font-semibold text-sm">Tu asistente de desarrollo infantil siempre en tu teléfono</p>
+                        <div class="space-y-2.5 pt-2">
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Acceso web responsivo sin necesidad de descargas pesadas desde cualquier navegador.</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Selector interactivo por rango de edad (0 a 60 meses) con actualización instantánea.</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Guarda el progreso de tu bebé y consúltalo durante las visitas de control pediátrico.</div>
+                            <div class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">✓ Disponible 24/7 de por vida con todas las actualizaciones futuras incluidas.</div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+                        <div class="relative max-w-sm rounded-2xl overflow-hidden shadow-2xl border border-teal-500/40 bg-slate-900 p-8 text-center">
+                            <span class="text-6xl mb-3 block">📱💻</span>
+                            <h4 class="text-lg font-bold text-white">MiniApp Interactiva</h4>
+                            <p class="text-xs text-amber-300">Acceso Web 24/7 en tu Teléfono</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Bonuses Grid -->
+            <div>
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 mb-3">
+                        ✨ <span>5 BONOS EXCLUSIVOS DE REGALO</span>
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
+                        Recibe estos 5 Bonos de Regalo 100% GRATIS al comprar hoy
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Bonus 1 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-teal-500/50 transition-all">
+                        <div class="p-6">
+                            <span class="text-3xl mb-2 block">📅</span>
+                            <span class="bg-teal-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-md uppercase">BONO 1</span>
+                            <h4 class="text-lg font-black text-white mt-2 mb-1">Calendario de Hitos "Mi Bebé Va Bien"</h4>
+                            <p class="text-xs font-bold text-teal-400 mb-3">0 a 30 meses</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">Un mapa visual cronológico de hitos mes a mes para colocar en el refrigerador o tener a mano en tu teléfono.</p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <div class="bg-slate-900/90 py-2 px-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400 font-medium">Valor comercial:</span>
+                                <span class="text-amber-400 font-extrabold">$19 USD • GRATIS!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bonus 2 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-teal-500/50 transition-all">
+                        <div class="p-6">
+                            <span class="text-3xl mb-2 block">📋</span>
+                            <span class="bg-teal-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-md uppercase">BONO 2</span>
+                            <h4 class="text-lg font-black text-white mt-2 mb-1">Checklist Maestro "Mi Bebé Va Bien"</h4>
+                            <p class="text-xs font-bold text-teal-400 mb-3">0 a 60 meses</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">Hojas de verificación imprimibles para llevar el registro exhaustivo de logros antes de cada control pediátrico.</p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <div class="bg-slate-900/90 py-2 px-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400 font-medium">Valor comercial:</span>
+                                <span class="text-amber-400 font-extrabold">$19 USD • GRATIS!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bonus 3 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-teal-500/50 transition-all">
+                        <div class="p-6">
+                            <span class="text-3xl mb-2 block">🚨</span>
+                            <span class="bg-teal-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-md uppercase">BONO 3</span>
+                            <h4 class="text-lg font-black text-white mt-2 mb-1">SOS Mi Bebé Va Bien</h4>
+                            <p class="text-xs font-bold text-teal-400 mb-3">Guía Rápida de Decisiones</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">Protocolo de emergencia y calma ante conductas atípicas, caídas en percentiles y desmitificación de alertas.</p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <div class="bg-slate-900/90 py-2 px-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400 font-medium">Valor comercial:</span>
+                                <span class="text-amber-400 font-extrabold">$24 USD • GRATIS!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bonus 4 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-teal-500/50 transition-all">
+                        <div class="p-6">
+                            <span class="text-3xl mb-2 block">🧩</span>
+                            <span class="bg-teal-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-md uppercase">BONO 4</span>
+                            <h4 class="text-lg font-black text-white mt-2 mb-1">Estimulación y juego, ¿va bien?</h4>
+                            <p class="text-xs font-bold text-teal-400 mb-3">Guía Práctica por Áreas</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">Estrategias de estimulación temprana clasificadas en áreas Sensorial, Motriz y Lenguaje con juegos cotidianos.</p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <div class="bg-slate-900/90 py-2 px-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400 font-medium">Valor comercial:</span>
+                                <span class="text-amber-400 font-extrabold">$27 USD • GRATIS!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bonus 5 -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-teal-500/50 transition-all">
+                        <div class="p-6">
+                            <span class="text-3xl mb-2 block">💡</span>
+                            <span class="bg-teal-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-md uppercase">BONO 5</span>
+                            <h4 class="text-lg font-black text-white mt-2 mb-1">25 Mitos del Desarrollo Infantil</h4>
+                            <p class="text-xs font-bold text-teal-400 mb-3">Lo que la ciencia dice vs lo que te dijeron</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">Derriba las creencias populares y comentarios de terceros que solo generan culpa y estrés en tu maternidad.</p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <div class="bg-slate-900/90 py-2 px-3 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <span class="text-slate-400 font-medium">Valor comercial:</span>
+                                <span class="text-amber-400 font-extrabold">$17 USD • GRATIS!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base sm:text-lg py-4 px-8 rounded-full shadow-xl transition-all transform hover:scale-105 active:scale-100 cursor-pointer inline-flex items-center gap-2 uppercase tracking-wide">
+                        <span>QUIERO EL SISTEMA + LOS 5 BONOS POR $24.90 USD!</span> →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Value & Pricing Table ($24.90 USD Promo) -->
+    <section id="precio" class="py-16 sm:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 bg-amber-400/15 text-amber-300 border border-amber-400/40 text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ⚡ <span>OFERTA ESPECIAL DE LANZAMIENTO</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+                    Acceso Completo y Vitalicio
+                </h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base">
+                    Todo el conocimiento y las herramientas que necesitas de los 0 a los 5 años en un solo pago sin mensualidades.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border-2 border-teal-500/50 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-teal-950/40 relative mb-8">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-teal-400 text-slate-950 font-black text-xs sm:text-sm px-6 py-1.5 rounded-full shadow-lg uppercase tracking-wider">
+                    PAQUETE COMPLETO TODO INCLUIDO
+                </div>
+
+                <div class="space-y-3 mb-8 pt-4">
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Ebook Principal 'Mi Bebé Va Bien' (0-60 meses)</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$47 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ MiniApp Web Interactiva Multi-dispositivo</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$37 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Bono 1: Calendario de Hitos (0 a 30 meses)</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$19 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Bono 2: Checklist Maestro (0 a 60 meses)</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$19 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Bono 3: SOS Mi Bebé Va Bien</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$24 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Bono 4: Estimulación y juego, ¿va bien?</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$27 USD</span>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 py-2 border-b border-slate-800 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-200 font-medium">✓ Bono 5: 25 Mitos del Desarrollo Infantil</div>
+                        <span class="text-slate-400 font-bold shrink-0 line-through">$17 USD</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950/90 rounded-2xl p-5 border border-slate-800 mb-8 space-y-2">
+                    <div class="flex justify-between text-xs sm:text-sm text-slate-400 font-medium">
+                        <span>Valor real de todo el paquete por separado:</span>
+                        <span class="line-through text-slate-400 font-bold">$190 USD</span>
+                    </div>
+                    <div class="flex justify-between text-xs sm:text-sm text-slate-400 font-medium">
+                        <span>Precio regular de venta:</span>
+                        <span class="line-through text-rose-400 font-bold">$97 USD</span>
+                    </div>
+                    <div class="pt-2 border-t border-slate-800 flex items-baseline justify-between">
+                        <div>
+                            <span class="text-xs text-amber-300 font-black uppercase tracking-wider block">PRECIO PROMOCIONAL HOY:</span>
+                            <span class="text-xs text-slate-400 font-medium">Un solo pago • Acceso de por vida</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-4xl sm:text-5xl font-black text-amber-400">$24.90</span>
+                            <span class="text-xs text-slate-300 font-bold block">USD (Dólares)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center space-y-3">
+                    <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-teal-400 hover:from-amber-300 hover:to-teal-300 text-slate-950 font-black text-xl sm:text-2xl py-5 px-8 rounded-2xl shadow-2xl shadow-amber-500/30 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer uppercase tracking-wider border-2 border-white/50 animate-pulse-glow">
+                        <span>¡OBTENER ACCESO COMPLETO POR $24.90 USD!</span> →
+                    </a>
+                    <p class="text-xs text-slate-400 font-semibold flex items-center justify-center gap-3 pt-1">
+                        <span>🔒 Procesado por Hotmart (Encriptación SSL 256-bit)</span>
+                        <span>⚡ Entrega Inmediata</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                <div class="w-14 h-14 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center shrink-0 border border-amber-400/40 text-2xl">🛡️</div>
+                <div>
+                    <h4 class="text-base font-black text-white">Garantía Incondicional de 7 Días</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                        Si en los primeros 7 días sientes que este sistema no ha transformado la claridad con la que acompañas el desarrollo de tu bebé, te reembolsamos el 100% de tu dinero sin preguntas ni complicaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Target Audience (Who it is & isn't for) -->
+    <section class="py-16 sm:py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 bg-teal-500/10 text-teal-300 border border-teal-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                    👥 <span>Claridad Total</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
+                    ¿Para quién es y para quién NO es este sistema?
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-950 border-2 border-emerald-500/40 rounded-3xl p-6 sm:p-8 shadow-xl">
+                    <div class="flex items-center gap-2 text-emerald-400 font-black text-lg mb-4">
+                        <span>✓ Este Sistema ES IDEAL PARA TI si:</span>
+                    </div>
+                    <ul class="space-y-3.5">
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-200">✓ Mamás y papás primerizos o experimentados con bebés de 0 a 5 años (0 a 60 meses).</li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-200">✓ Familias que desean prevenir retrasos y actuar en la ventana de oportunidad adecuada.</li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-200">✓ Padres cansados de la desinformación de internet y las opiniones contradictorias.</li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-200">✓ Cuidadores, abuelos y educadores que buscan una referencia seria y estructurada.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 border border-rose-500/30 rounded-3xl p-6 sm:p-8 shadow-xl">
+                    <div class="flex items-center gap-2 text-rose-400 font-black text-lg mb-4">
+                        <span>✕ Este Sistema NO ES PARA TI si:</span>
+                    </div>
+                    <ul class="space-y-3.5">
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">✕ Quienes buscan una consulta diagnóstica médica individual de urgencia.</li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">✕ Personas que creen que todos los niños deben aprender al mismo minuto exacto sin respetar su ritmo.</li>
+                        <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-300">✕ Quienes no desean dedicar unos minutos al mes a observar con amor el progreso de su hijo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Emotional Transformation Vision -->
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="w-16 h-16 rounded-3xl bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto border border-teal-500/30 text-2xl">🧭</div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-snug">
+                Imagina vivir los primeros 5 años de tu hijo con <span class="text-teal-300">plena confianza y serenidad</span>
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+                Sin noches de angustia frente a la pantalla del celular buscando síntomas ambiguos. Sin dudar en cada reunión familiar cuando alguien compare a tu bebé. Con la tranquilidad de saber con precisión médica y amor maternal qué esperar mes a mes.
+            </p>
+            <div class="pt-4 flex items-center justify-center gap-2 text-xs font-bold text-amber-300 bg-amber-400/10 border border-amber-400/20 py-2.5 px-5 rounded-full inline-flex">
+                ❤️ <span>La infancia de tu hijo pasa solo una vez. Disfrútala con la seguridad que ambos merecen.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. 100% Secure Purchase Workflow & Guarantees -->
+    <section class="py-16 sm:py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 border-2 border-teal-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <div class="inline-flex items-center gap-1.5 bg-teal-500/20 text-teal-300 border border-teal-500/40 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider mb-2">
+                        🛡️ <span>Compra 100% Protegida</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white">¿Cómo es el proceso de pago y entrega?</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 rounded-full bg-teal-500/10 text-teal-400 font-black text-sm flex items-center justify-center mx-auto mb-3">1</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Pago Seguro</h4>
+                        <p class="text-xs text-slate-400">Procesado por Hotmart con cifrado de seguridad bancaria en tu moneda local.</p>
+                    </div>
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 rounded-full bg-amber-400/10 text-amber-300 font-black text-sm flex items-center justify-center mx-auto mb-3">2</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Acceso Inmediato</h4>
+                        <p class="text-xs text-slate-400">Recibes tus enlaces de acceso y descarga en tu correo electrónico al instante.</p>
+                    </div>
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-400 font-black text-sm flex items-center justify-center mx-auto mb-3">3</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Acceso Vitalicio</h4>
+                        <p class="text-xs text-slate-400">Guarda los archivos en tus dispositivos y consulta la MiniApp siempre que lo necesites.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-black text-base sm:text-lg py-3.5 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-100 cursor-pointer inline-flex items-center gap-2 uppercase tracking-wide">
+                        <span>Pagar Seguro en Hotmart - USD $24.90</span> →
+                    </a>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-slate-400">
+                    <span>🔒 Encriptación SSL 256-bit</span>
+                    <span>💳 Tarjetas, PayPal, Débito y Efectivo Local</span>
+                    <span>⭐ Garantía de Satisfacción 7 Días</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Frequently Asked Questions (FAQ) -->
+    <section id="faq" class="py-16 sm:py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 bg-teal-500/10 text-teal-400 border border-teal-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+                    ❓ <span>Preguntas Frecuentes</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white">Resolvemos tus dudas</h2>
+                <p class="text-slate-400 text-sm mt-2">Todo lo que necesitas saber antes de acceder al sistema hoy:</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-1')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900/60 transition-colors">
+                        <span class="font-bold text-white text-sm sm:text-base">¿Cómo y cuándo recibo el acceso a la guía y a la MiniApp?</span>
+                        <span id="icon-faq-1" class="text-teal-400 font-bold">▼</span>
+                    </button>
+                    <div id="content-faq-1" class="px-5 pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900">
+                        El acceso es 100% inmediato. Una vez que realizas tu pago seguro a través de Hotmart, el sistema te envía automáticamente los datos de acceso y enlaces de descarga a tu correo electrónico en cuestión de segundos.
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-2')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900/60 transition-colors">
+                        <span class="font-bold text-white text-sm sm:text-base">¿Necesito instalar alguna aplicación pesada en mi celular para usar la MiniApp?</span>
+                        <span id="icon-faq-2" class="text-teal-400 font-bold">▼</span>
+                    </button>
+                    <div id="content-faq-2" class="px-5 pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900 hidden">
+                        No necesitas descargar nada de ninguna tienda de aplicaciones. La MiniApp funciona directamente desde el navegador web de cualquier teléfono (iPhone o Android), tablet o computadora con total fluidez.
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-3')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900/60 transition-colors">
+                        <span class="font-bold text-white text-sm sm:text-base">¿Hasta qué edad del niño cubre este sistema?</span>
+                        <span id="icon-faq-3" class="text-teal-400 font-bold">▼</span>
+                    </button>
+                    <div id="content-faq-3" class="px-5 pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900 hidden">
+                        El sistema cubre desde el nacimiento hasta los 5 años cumplidos (0 a 60 meses), abarcando todas las etapas clave de la primera infancia y el desarrollo preescolar.
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-4')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900/60 transition-colors">
+                        <span class="font-bold text-white text-sm sm:text-base">¿Qué moneda se utiliza para el pago y cómo funciona en mi país?</span>
+                        <span id="icon-faq-4" class="text-teal-400 font-bold">▼</span>
+                    </button>
+                    <div id="content-faq-4" class="px-5 pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-900 hidden">
+                        Hotmart procesa el pago de forma segura y convierte automáticamente los $24.90 USD a la moneda local de tu país (Pesos mexicanos, Soles peruanos, Pesos colombianos, Euros, etc.) con múltiples métodos de pago disponibles.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Customer Support Section -->
+    <section class="py-14 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Atención y Acompañamiento</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white">¿Tienes alguna duda o necesitas soporte?</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 max-w-lg">Nuestro equipo de atención está disponible para ayudarte con el acceso a tus materiales o resolver cualquier inquietud antes y después de tu compra.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+                    <a href="mailto:mibebevabien@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-bold py-3 px-5 rounded-xl border border-slate-700 flex items-center gap-2 transition-colors">
+                        ✉️ <span>mibebevabien@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Final Compelling Closing CTA -->
+    <section class="py-16 sm:py-24 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-t border-slate-800 text-center relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-teal-500/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-black px-4 py-1.5 rounded-full">
+                ⚡ <span>ÚLTIMA OPORTUNIDAD AL PRECIO DE LANZAMIENTO</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                Dale a tu hijo el mejor comienzo y a ti <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-teal-300 to-emerald-300">la máxima tranquilidad</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Accede hoy al Ebook Principal (0-60 meses) + MiniApp Web Móvil + los 5 Bonos de Regalo por solo <strong class="text-amber-400">$24.90 USD</strong>.
+            </p>
+            <div class="max-w-2xl mx-auto space-y-3">
+                <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-amber-400 via-amber-300 to-teal-400 hover:from-amber-300 hover:to-teal-300 text-slate-950 font-black text-xl sm:text-2xl py-5 px-8 rounded-2xl shadow-2xl shadow-amber-500/30 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer uppercase tracking-wider border-2 border-white/50 animate-pulse-glow">
+                    <span>¡OBTENER ACCESO INMEDIATO POR $24.90!</span> →
+                </a>
+                <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-400 font-semibold pt-2">
+                    <span>🔒 Pago 100% Seguro por Hotmart</span>
+                    <span>⚡ Acceso Inmediato a tu Correo</span>
+                    <span>⭐ Garantía de 7 Días</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Professional Footer with Legal/Medical Disclaimers -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-white p-0.5 overflow-hidden border border-teal-500/40 flex items-center justify-center text-teal-600 font-bold text-lg">👶</div>
+                    <div>
+                        <p class="font-bold text-white text-sm">Mi Bebé Va Bien</p>
+                        <p class="text-[11px] text-slate-400">Guía de Desarrollo Infantil 0 a 60 Meses por Ruth Rojas</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-medium">
+                    <a href="#problema" class="hover:text-teal-400 transition-colors">¿Tu Duda?</a>
+                    <a href="#solucion" class="hover:text-teal-400 transition-colors">El Sistema</a>
+                    <a href="#bonos" class="hover:text-teal-400 transition-colors">5 Bonos</a>
+                    <a href="#precio" class="hover:text-teal-400 transition-colors">Oferta $24.90</a>
+                    <a href="#faq" class="hover:text-teal-400 transition-colors">Preguntas Frecuentes</a>
+                    <a href="mailto:mibebevabien@gmail.com" class="hover:text-teal-400 transition-colors">Contacto / Soporte</a>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-[11px] text-slate-400 leading-relaxed max-w-4xl mx-auto text-center">
+                <p>
+                    <strong>Aviso Médico y Responsabilidad:</strong> El contenido de "Mi Bebé Va Bien" tiene fines exclusivamente educativos e informativos sobre el neurodesarrollo y la estimulación temprana. En ningún caso reemplaza el diagnóstico, evaluación personalizada o tratamiento de un médico pediatra, neuropediatra o profesional de la salud calificado. Ante cualquier señal de alarma o duda de salud, consulte siempre con su médico de confianza.
+                </p>
+                <p>
+                    <strong>Descargo de Hotmart:</strong> Este producto se comercializa a través de Hotmart. La plataforma no hace control editorial previo de los productos comercializados, ni evalúa el tecnicismo y la experiencia de los autores. La existencia de un producto y su adquisición a través de la plataforma no puede ser considerada como garantía de calidad de contenido ni de resultado en ningún caso. Al comprarlo, el comprador declara conocer esta información.
+                </p>
+                <p class="pt-2 text-slate-400">
+                    © <span id="current-year">2026</span> Mi Bebé Va Bien • Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 17. Sticky Mobile CTA Bar -->
+    <div id="sticky-mobile-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-teal-500/40 p-3 sm:hidden shadow-2xl hidden">
+        <div class="flex items-center justify-between gap-3 max-w-md mx-auto">
+            <div class="flex flex-col">
+                <span class="text-[10px] text-teal-400 font-bold uppercase tracking-wide">Ebook + MiniApp + 5 Bonos</span>
+                <span class="text-base font-black text-amber-400">$24.90 USD <span class="text-[10px] text-slate-400 line-through font-normal">$97</span></span>
+            </div>
+            <a href="https://pay.hotmart.com/W107185007O" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-400 to-teal-400 text-slate-950 font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-1.5 cursor-pointer hover:opacity-95 active:scale-95 transition-transform">
+                <span>OBTENER AHORA</span> →
+            </a>
+        </div>
+    </div>
+
+    <!-- 18. Live Recent Sales Notifications Toast -->
+    <div id="sales-toast" class="fixed bottom-20 sm:bottom-6 left-4 z-50 transition-all transform duration-500 ease-out hidden">
+        <div class="bg-slate-900/95 backdrop-blur-md border border-teal-500/40 rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 max-w-xs sm:max-w-sm">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center shrink-0 border border-teal-500/30 font-bold">🛒</div>
+            <div class="text-xs">
+                <p class="font-bold text-white flex items-center gap-1">
+                    <span id="toast-name">Carolina M.</span> <span class="text-slate-400 font-normal" id="toast-loc">de Bogotá, Colombia</span>
+                </p>
+                <p class="text-teal-400 font-medium text-[11px]">
+                    Adquirió el <strong id="toast-product">Pack Completo 0-60m</strong>
+                </p>
+                <span class="text-[10px] text-slate-400" id="toast-time">hace 3 minutos</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactive Handlers -->
+    <script>
+        // Dynamic Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Countdown Timer
+        let totalSeconds = 14 * 60 + 52;
+        const timerEl = document.getElementById('countdown-timer');
+        setInterval(() => {
+            if (totalSeconds > 0) totalSeconds--;
+            else totalSeconds = 15 * 60;
+            const m = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const s = String(totalSeconds % 60).padStart(2, '0');
+            timerEl.textContent = `${m}:${s}`;
+        }, 1000);
+
+        // Interactive MiniApp Demo Data
+        const demoData = {
+            "0-3m": {
+                range: "0 a 3 Meses",
+                label: "Recién Nacido a 3 Meses",
+                desc: "Etapa de adaptación al mundo exterior, fijación de mirada y primeros reflejos.",
+                skills: [
+                    "Sostiene la cabeza momentáneamente al estar boca abajo",
+                    "Sigue objetos brillantes y rostros con la mirada",
+                    "Sonrisa social en respuesta a la voz de mamá o papá",
+                    "Reacciona ante sonidos fuertes girando o parpadeando"
+                ],
+                alerts: [
+                    "No reacciona a sonidos intensos",
+                    "No fija la mirada ni sigue rostros a corta distancia",
+                    "Cuerpo extremadamente rígido o excesivamente flácido"
+                ]
+            },
+            "4-6m": {
+                range: "4 a 6 Meses",
+                label: "4 a 6 Meses",
+                desc: "Control cefálico firme, primeros giros y descubrimiento de sus manos.",
+                skills: [
+                    "Se voltea de boca abajo a boca arriba o viceversa",
+                    "Lleva objetos a la boca y agarra juguetes con ambas manos",
+                    "Emite balbuceos con consonantes simples (ba, da, ma)",
+                    "Se apoya firmemente en los antebrazos al estar boca abajo"
+                ],
+                alerts: [
+                    "No sostiene la cabeza con firmeza",
+                    "No intenta alcanzar objetos con sus manos",
+                    "No emite sonidos ni sonríe socialmente"
+                ]
+            },
+            "7-9m": {
+                range: "7 a 9 Meses",
+                label: "7 a 9 Meses",
+                desc: "Sedestación independiente, arrastre, gateo inicial y angustia de separación.",
+                skills: [
+                    "Se sienta sin apoyo durante varios minutos",
+                    "Pasa objetos de una mano a otra con soltura",
+                    "Balbucea secuencias más complejas (mamama, dadada)",
+                    "Responde a su propio nombre cuando lo llaman"
+                ],
+                alerts: [
+                    "No se sienta ni con apoyo leve a los 9 meses",
+                    "No transfiere objetos entre manos",
+                    "No responde cuando lo llaman por su nombre"
+                ]
+            },
+            "10-12m": {
+                range: "10 a 12 Meses",
+                label: "10 a 12 Meses",
+                desc: "Primeros pasos con apoyo, pinza fina y primeras palabras con sentido.",
+                skills: [
+                    "Se pone de pie apoyándose en muebles o barandillas",
+                    "Pinza fina entre dedo índice y pulgar para agarrar trocitos",
+                    "Dice 'mamá', 'papá' o una palabra con intención clara",
+                    "Entiende el 'no' y saluda con la mano (gestos sociales)"
+                ],
+                alerts: [
+                    "No sostiene su peso sobre sus piernas apoyado",
+                    "No utiliza pinza fina con sus dedos",
+                    "No hace gestos como señalar o despedirse"
+                ]
+            },
+            "13-24m": {
+                range: "13 a 24 Meses",
+                label: "1 a 2 Años",
+                desc: "Marcha libre, explosión del vocabulario y autonomía en la exploración.",
+                skills: [
+                    "Camina de forma independiente y segura",
+                    "Vocabulario de 10 a 50+ palabras hacia los 2 años",
+                    "Construye torres de 3 a 6 bloques y garabatea",
+                    "Sigue instrucciones sencillas de dos pasos"
+                ],
+                alerts: [
+                    "No camina solo hacia los 18 meses",
+                    "No pronuncia al menos 6 palabras a los 18 meses",
+                    "Pérdida de habilidades previamente adquiridas"
+                ]
+            },
+            "25-60m": {
+                range: "2 a 5 Años",
+                label: "2 a 5 Años (Prescolar)",
+                desc: "Frases complejas, motricidad avanzada, juego simbólico e interacción social.",
+                skills: [
+                    "Formula oraciones de 3 o más palabras",
+                    "Salta en dos pies, corre y sube escaleras alternando pies",
+                    "Participa en juegos de rol imaginarios con otros niños",
+                    "Control de esfínteres diurno progresivo"
+                ],
+                alerts: [
+                    "Dificultad marcada para entender su habla a los 3 años",
+                    "Falta de interés por interactuar con otros niños o adultos",
+                    "Dificultad extrema para saltar o manipular crayones"
+                ]
+            }
+        };
+
+        function switchAge(id) {
+            // Update buttons styling
+            document.querySelectorAll('.age-btn').forEach(btn => {
+                btn.className = "age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-slate-900 text-slate-300 border border-slate-800";
+            });
+            const activeBtn = document.getElementById(`btn-${id}`);
+            activeBtn.className = "age-btn py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer flex flex-col items-center justify-center text-center bg-gradient-to-b from-teal-500 to-emerald-500 text-slate-950 shadow-lg shadow-teal-500/20 scale-105";
+
+            // Update content
+            const data = demoData[id];
+            document.getElementById('preview-label').textContent = data.label;
+            document.getElementById('preview-desc').textContent = data.desc;
+
+            const skillsList = document.getElementById('preview-skills');
+            skillsList.innerHTML = data.skills.map(s => `<li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span><span>${s}</span></li>`).join('');
+
+            const alertsList = document.getElementById('preview-alerts');
+            alertsList.innerHTML = data.alerts.map(a => `<li class="flex items-start gap-2.5 text-xs sm:text-sm text-rose-200"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span><span>${a}</span></li>`).join('');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '▲';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '▼';
+            }
+        }
+
+        // Sticky Mobile Bar & Sales Toast on Scroll
+        window.addEventListener('scroll', () => {
+            const mobileBar = document.getElementById('sticky-mobile-bar');
+            if (window.scrollY > 400) {
+                mobileBar.classList.remove('hidden');
+            } else {
+                mobileBar.classList.add('hidden');
+            }
+        });
+
+        // Live Sales Toast Loop
+        const salesList = [
+            { name: 'Carolina M.', loc: 'de Bogotá, Colombia', product: 'Pack Completo 0-60m', time: 'hace 3 minutos' },
+            { name: 'Mariana S.', loc: 'de Ciudad de México, México', product: 'Ebook + MiniApp + 5 Bonos', time: 'hace 6 minutos' },
+            { name: 'Valentina R.', loc: 'de Santiago, Chile', product: 'Pack Completo 0-60m', time: 'hace 11 minutos' },
+            { name: 'Lucía G.', loc: 'de Madrid, España', product: 'Ebook + 5 Bonos', time: 'hace 15 minutos' },
+            { name: 'Gabriela P.', loc: 'de Lima, Perú', product: 'Pack Completo 0-60m', time: 'hace 18 minutos' }
+        ];
+        let salesIdx = 0;
+        const toastEl = document.getElementById('sales-toast');
+
+        function showNextSale() {
+            const sale = salesList[salesIdx];
+            document.getElementById('toast-name').textContent = sale.name;
+            document.getElementById('toast-loc').textContent = sale.loc;
+            document.getElementById('toast-product').textContent = sale.product;
+            document.getElementById('toast-time').textContent = sale.time;
+
+            toastEl.classList.remove('hidden');
+            setTimeout(() => {
+                toastEl.classList.add('hidden');
+            }, 4500);
+
+            salesIdx = (salesIdx + 1) % salesList.length;
+        }
+
+        setTimeout(() => {
+            showNextSale();
+            setInterval(showNextSale, 18000);
+        }, 4000);
+    </script>
+</body>
+</html>
