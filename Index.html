@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Bebé Va Bien | Desarrollo Infantil 0-60M</title>
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Mi Bebé Va Bien | Desarrollo Infantil de 0 a 60 Meses</title>
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Montserrat Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -15,84 +13,49 @@
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
                     },
+                    colors: {
+                        teal: { 500: '#14b8a6' },
+                        slate: { 900: '#0f172a', 950: '#020617' }
+                    }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
 </head>
-<body class="bg-[#0b0f19] text-slate-100 font-sans selection:bg-teal-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 antialiased">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 py-2.5 text-center text-xs md:text-sm font-bold tracking-wide text-slate-950 uppercase shadow-md">
-        🔥 OFERTA DE LANZAMIENTO - 85% de Descuento en el Sistema "Mi Bebé Va Bien"
-    </div>
-
-    <!-- Navbar -->
-    <nav class="border-b border-slate-800 bg-[#0b0f19]/90 backdrop-blur sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-teal-500 text-slate-950 font-black px-2.5 py-1.5 rounded-lg text-xs uppercase tracking-wider">
-                    Mi Bebé
-                </div>
-                <span class="text-xs md:text-sm font-bold tracking-widest text-teal-400 uppercase">Desarrollo Infantil 0-60M</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 text-xs font-semibold text-slate-300">
-                <a href="#duda" class="hover:text-teal-400 transition">¿TU DUDA?</a>
-                <a href="#sistema" class="hover:text-teal-400 transition">EL SISTEMA</a>
-                <a href="#beneficios" class="hover:text-teal-400 transition">BENEFICIOS</a>
-                <a href="#miniapp" class="hover:text-teal-400 transition">PROBADOR MINIAPP</a>
-                <a href="#bonos" class="hover:text-teal-400 transition">5 BONOS</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="container mx-auto px-6 pt-12 pb-16">
-        <div class="max-w-4xl mx-auto text-center">
-            
-            <!-- Badge Autoría -->
-            <div class="inline-flex items-center space-x-2 bg-slate-900 border border-teal-500/30 rounded-full px-4 py-1.5 mb-8 shadow-inner">
-                <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-                <span class="text-xs font-semibold text-teal-300 tracking-wide">OFERTA ESPECIAL DE LANZAMIENTO - ACCESO INMEDIATO</span>
-                <span class="text-xs text-slate-400 pl-2 border-l border-slate-700">Por Ruth Rojas</span>
-            </div>
-
-            <!-- Main Headline Graphic Style -->
-            <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-none">
-                <span class="text-white drop-shadow-md">¿MI BEBÉ</span><br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-400 to-green-300">VA BIEN?</span>
-            </h1>
-
-            <p class="text-base md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                El sistema integral creado por <strong class="text-white font-semibold">Ruth Rojas</strong> que ayuda a madres y padres a comprender el desarrollo infantil de 0 a 60 meses con total tranquilidad, claridad y respaldo científico.
-            </p>
-
-            <p class="text-sm text-slate-400 mb-8 max-w-xl mx-auto">
-                Aprende qué observar, cuándo actuar y cómo acompañar cada etapa con el Ebook Guía Completa, la MiniApp Interactiva y 5 Bonos de Regalo.
-            </p>
-
-            <!-- Main CTA Button -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://pay.hotmart.com/W107185007O" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 font-extrabold py-4 px-8 rounded-xl text-base md:text-lg shadow-xl shadow-teal-900/30 transition-all transform hover:-translate-y-0.5">
-                    ¡Sí! QUIERO ACCESO POR SOLO 24,90
-                </a>
-            </div>
-            
-            <p class="text-xs text-slate-500 mt-4">🔒 Pago 100% seguro y acceso inmediato a tu correo electrónico.</p>
-        </div>
+    <!-- Header / Nav -->
+    <header class="p-6 text-center">
+        <h1 class="text-3xl md:text-5xl font-black text-teal-500 mb-4">Sistema Mi Bebé Va Bien</h1>
+        <p class="text-xl">El desarrollo infantil de 0 a 60 meses en una guía práctica.</p>
     </header>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-slate-500 text-xs">
-        <p>&copy; 2026 Ayuda Autista / Recursos de Salud y Bienestar. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <section class="bg-slate-900 p-8 rounded-2xl border border-slate-700 shadow-xl">
+            <h2 class="text-2xl font-bold mb-6">Tu guía definitiva para entender y acompañar el crecimiento de tu hijo.</h2>
+            <p class="mb-6 text-slate-300">No adivines más. Con herramientas estructuradas paso a paso, sabrás exactamente qué esperar y cómo estimular a tu bebé en cada etapa crítica de sus primeros 5 años.</p>
+            
+            <!-- Pricing & CTA -->
+            <div class="text-center mt-10">
+                <div class="text-5xl font-black mb-6">24,90</div>
+                <a href="https://pay.hotmart.com/W107185007O" 
+                   target="_blank" 
+                   class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-10 rounded-full text-lg transition-transform hover:scale-105 shadow-lg shadow-teal-500/20">
+                    ACCEDER AL SISTEMA AHORA
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <!-- Floating Mobile Checkout Bar -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-slate-900/95 backdrop-blur border-t border-slate-800 md:hidden z-50">
-        <a href="https://pay.hotmart.com/W107185007O" target="_blank" class="block w-full bg-teal-500 text-slate-950 font-black py-3 px-4 rounded-xl text-center text-sm shadow-lg">
-            ¡ACCEDER AHORA POR 24,90!
-        </a>
-    </div>
+    <!-- Footer -->
+    <footer class="text-center py-10 text-slate-500 text-sm">
+        &copy; 2026 Ayuda Autista. Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
