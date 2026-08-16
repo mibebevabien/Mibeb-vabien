@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bebé Va Bien | Guía de Desarrollo Infantil y MiniApp</title>
+    <!-- Tailwind CSS CDN -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yBjhpP-J8hOOfitJvM6ZE544uIxu1161zWY68bBMUIl_kRuE64uL_xi5nFecYrMV3tpA-8WG10ymhEEbu2Lkorqt5D6KTi0PKRjLcYqZCkzzHSEm9kQqY1gWlDdoVwu9OMHiAZ6JvEUgMj34LTSB9uDM3jElE-5mp1TSPSY58dVUJ4dVtRSGUZS0D7SbIFC0SGv15czT7FWcFNY_YP3al8eKYSHedmUtZx0tX48s-c4D7QxdFO-qYsy5gvNXck4_RpBVPcenDGl0TirgaVel48D7rRYPtc7ZPRzH7eBy3WMNTG9NRg7KccrOUyoRbaGH" charset="UTF-8"></script><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font Awesome / Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FFF5F5 0%, #F0FDF4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #059669 0%, #0D9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Top Urgency Banner -->
+    <div class="bg-rose-600 text-white py-2 px-4 text-center text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 shadow-sm sticky top-0 z-50">
+        <i data-lucide="flame" class="w-4 h-4 animate-bounce"></i>
+        <span>¡OFERTA DE LANZAMIENTO! 86% DE DESCUENTO SOLO POR HOY</span>
+        <span class="bg-white/20 px-2 py-0.5 rounded text-xs font-mono" id="timer">14:59</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 py-4 px-4 sm:px-8 sticky top-8 z-40">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-emerald-500 text-white p-2 rounded-xl shadow-md shadow-emerald-200">
+                    <i data-lucide="baby" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900 block leading-tight">Mi Bebé Va Bien</span>
+                    <span class="text-[10px] text-emerald-600 font-bold tracking-widest uppercase">Por Lic. Ruth Rojas</span>
+                </div>
+            </div>
+            <a href="#precio" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-full text-sm shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2">
+                <span>Acceder Ahora</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-12 sm:py-20 px-4 sm:px-8 overflow-hidden relative">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-emerald-100/80 border border-emerald-200 text-emerald-800 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                <span>Guía Científica + MiniApp Interactiva de Acompañamiento</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                Descubre si el desarrollo de tu bebé está en el camino correcto en <span class="text-gradient">menos de 3 minutos</span>
+            </h1>
+
+            <p class="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
+                Transforma la incertidumbre y la ansiedad en tranquilidad absoluta. Una herramienta digital práctica creada por profesionales para evaluar, estimular y acompañar el desarrollo de tu hijo de 0 a 60 meses.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
+                <a href="#precio" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-lg px-8 py-4 rounded-2xl shadow-xl shadow-emerald-600/30 hover:scale-105 transition-all duration-200 flex items-center justify-center gap-3">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    <span>¡QUIERO MI ACCESO INMEDIATO!</span>
+                </a>
+            </div>
+
+            <!-- Social Proof Badge -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-slate-500 text-xs sm:text-sm pt-4 border-t border-slate-200/60 max-w-2xl mx-auto">
+                <div class="flex items-center gap-1.5">
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <span class="font-bold text-slate-700 ml-1">4.9/5</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i data-lucide="users" class="w-4 h-4 text-emerald-600"></i>
+                    <span>+1,200 familias acompañadas</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Acceso de por vida</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-16 px-4 sm:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+                    ¿Te identificas con alguna de estas situaciones?
+                </h2>
+                <p class="text-slate-600">La maternidad no viene con manual, pero no tienes que afrontarla con dudas constantes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-rose-50/50 border border-rose-100 p-6 rounded-2xl flex gap-4 items-start">
+                    <div class="bg-rose-100 text-rose-600 p-3 rounded-xl shrink-0">
+                        <i data-lucide="help-circle" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">¿Estará avanzando a su ritmo adecuado?</h3>
+                        <p class="text-sm text-slate-600">Comparas a tu bebé con otros niños de su edad y te preguntas si debería gatear, hablar o balbucear más.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/50 border border-rose-100 p-6 rounded-2xl flex gap-4 items-start">
+                    <div class="bg-rose-100 text-rose-600 p-3 rounded-xl shrink-0">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Sobreinformación en internet</h3>
+                        <p class="text-sm text-slate-600">Buscas en Google o redes sociales y solo encuentras diagnósticos alarmistas que te generan más ansiedad.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/50 border border-rose-100 p-6 rounded-2xl flex gap-4 items-start">
+                    <div class="bg-rose-100 text-rose-600 p-3 rounded-xl shrink-0">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Citas médicas muy distanciadas</h3>
+                        <p class="text-sm text-slate-600">Los controles pediátricos duran poco tiempo y te quedas con dudas entre consulta y consulta.</p>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50/50 border border-rose-100 p-6 rounded-2xl flex gap-4 items-start">
+                    <div class="bg-rose-100 text-rose-600 p-3 rounded-xl shrink-0">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Miedo a pasar por alto una alerta</h3>
+                        <p class="text-sm text-slate-600">Temes no detectar a tiempo algún retraso madurativo en el lenguaje, motricidad o interacción social.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section class="py-16 px-4 sm:px-8 bg-slate-900 text-white relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Demo en vivo</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold mt-3 mb-4">Prueba la MiniApp Interactiva</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Selecciona la edad de tu hijo para ver cómo la aplicación organiza los hitos y ejercicios:</p>
+            </div>
+
+            <!-- Interactive App Box -->
+            <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <!-- Age Selector Tabs -->
+                <div class="flex flex-wrap gap-2 justify-center mb-8" id="age-tabs">
+                    <button onclick="selectAge(0)" class="tab-btn active-tab bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">0-6 Meses</button>
+                    <button onclick="selectAge(1)" class="tab-btn bg-slate-700 text-slate-300 hover:bg-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">6-12 Meses</button>
+                    <button onclick="selectAge(2)" class="tab-btn bg-slate-700 text-slate-300 hover:bg-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">12-24 Meses</button>
+                    <button onclick="selectAge(3)" class="tab-btn bg-slate-700 text-slate-300 hover:bg-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">24-36 Meses</button>
+                    <button onclick="selectAge(4)" class="tab-btn bg-slate-700 text-slate-300 hover:bg-slate-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all">36-60 Meses</button>
+                </div>
+
+                <!-- Display Content -->
+                <div id="app-display" class="space-y-6">
+                    <!-- Dynamic Content Injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack & Offer Section -->
+    <section id="precio" class="py-16 px-4 sm:px-8 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 font-extrabold text-xs uppercase tracking-widest">Paquete Completo</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mt-2">Todo lo que recibes hoy</h2>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden mb-8">
+                <div class="p-6 sm:p-8 space-y-6">
+                    <!-- Main Product -->
+                    <div class="flex items-start gap-4 pb-6 border-b border-slate-100">
+                        <div class="bg-emerald-100 text-emerald-700 p-3 rounded-2xl shrink-0">
+                            <i data-lucide="book-open" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-extrabold text-slate-900 text-lg">Guía Digital + MiniApp "Mi Bebé Va Bien"</h3>
+                                <span class="text-slate-400 line-through text-sm font-bold">USD $47.00</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-1">Evaluación de desarrollo por etapas de 0 a 60 meses, semáforo de alertas y guía de estimulación oportuna.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bonuses List -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-xs uppercase tracking-wider text-emerald-600">5 Bonos Exclusivos Incluidos Gratis:</h4>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                            <div class="flex-1 text-sm">
+                                <span class="font-bold text-slate-800">Bono 1: Calendario Digital de Hitos del Desarrollo</span>
+                                <span class="text-slate-400 text-xs ml-2 line-through">USD $25.00</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                            <div class="flex-1 text-sm">
+                                <span class="font-bold text-slate-800">Bono 2: Checklist Imprimible para la Consulta Pediátrica</span>
+                                <span class="text-slate-400 text-xs ml-2 line-through">USD $19.00</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                            <div class="flex-1 text-sm">
+                                <span class="font-bold text-slate-800">Bono 3: Guía Rápida SOS "Semáforo de Alertas Tempranas"</span>
+                                <span class="text-slate-400 text-xs ml-2 line-through">USD $29.00</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                            <div class="flex-1 text-sm">
+                                <span class="font-bold text-slate-800">Bono 4: Recetario de Juegos Cortos de Estimulación en Casa</span>
+                                <span class="text-slate-400 text-xs ml-2 line-through">USD $35.00</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="gift" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                            <div class="flex-1 text-sm">
+                                <span class="font-bold text-slate-800">Bono 5: Guía "25 Mitos vs Realidades del Desarrollo Infantil"</span>
+                                <span class="text-slate-400 text-xs ml-2 line-through">USD $23.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Box CTA -->
+                <div class="bg-slate-900 text-white p-8 text-center border-t border-slate-800">
+                    <p class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-1">Precio Total Regular: <span class="line-through text-slate-500">USD $178.00</span></p>
+                    <div class="flex items-center justify-center gap-2 mb-4">
+                        <span class="text-2xl font-bold text-slate-300">HOY SOLO:</span>
+                        <span class="text-5xl font-black text-emerald-400">USD $24.90</span>
+                    </div>
+
+                    <a href="https://payhip.com/recursossaludybienestar" target="_blank" class="block w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-lg py-4 rounded-2xl shadow-lg shadow-emerald-500/20 hover:scale-[1.02] transition-all duration-200">
+                        ¡OBTENER MI ACCESO AHORA CON 86% DESC.!
+                    </a>
+
+                    <div class="flex items-center justify-center gap-4 text-xs text-slate-400 mt-4">
+                        <span class="flex items-center gap-1"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Pago Seguro</span>
+                        <span class="flex items-center gap-1"><i data-lucide="download" class="w-3.5 h-3.5"></i> Descarga Inmediata</span>
+                        <span class="flex items-center gap-1"><i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Pago Único</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Profile -->
+    <section class="py-16 px-4 sm:px-8 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-8">
+            <div class="w-32 h-32 rounded-full bg-emerald-100 border-4 border-emerald-500 overflow-hidden shrink-0 shadow-lg flex items-center justify-center text-emerald-700">
+                <i data-lucide="user" class="w-16 h-16"></i>
+            </div>
+            <div>
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Creado por Profesional de Salud</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-1 mb-2">Lic. Ruth Rojas</h3>
+                <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                    Enfermera profesional con más de 14 años de experiencia en consulta clínica y orientación familiar. Creadora de la comunidad <strong>Ayuda Autista</strong> y especialista en desarrollo infantil temprano.
+                </p>
+                <div class="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+                    <i data-lucide="award" class="w-4 h-4 text-emerald-600"></i>
+                    <span>+14 Años de experiencia clínica acompañando a familias</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 text-xs py-8 px-4 text-center border-t border-slate-800">
+        <p class="max-w-2xl mx-auto mb-4">
+            Descargo de responsabilidad: Este material tiene fines puramente educativos e informativos y no reemplaza la consulta, diagnóstico ni tratamiento médico profesional.
+        </p>
+        <p>© 2026 Ayuda Autista - Recursos de Salud y Bienestar. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Data for Interactive App Demo
+        const demoData = [
+            {
+                age: "0 a 6 Meses",
+                milestones: ["Sostiene la cabeza", "Sigue objetos con la mirada", "Responde a sonidos y sonríe"],
+                activity: "Juegos frente al espejo y estimulación auditiva suave."
+            },
+            {
+                age: "6 a 12 Meses",
+                milestones: ["Se sienta sin apoyo", "Inicia gateo o arrastre", "Balbucea sílabas (ba-ba, ma-ma)"],
+                activity: "Escondite con mantas ('¿Dónde está el bebé?') para permanencia del objeto."
+            },
+            {
+                age: "12 a 24 Meses",
+                milestones: ["Camina de forma independiente", "Dice sus primeras palabras con intención", "Señala objetos de interés"],
+                activity: "Juegos de apilar torres y nombrar animales o partes del cuerpo."
+            },
+            {
+                age: "24 a 36 Meses",
+                milestones: ["Combina 2 o más palabras", "Sube escalones con ayuda", "Imita acciones de los adultos"],
+                activity: "Clasificación de colores y formas con recipientes seguros."
+            },
+            {
+                age: "36 a 60 Meses",
+                milestones: ["Mantiene conversaciones simples", "Se viste con poca ayuda", "Juego interactivo y simbólico con pares"],
+                activity: "Lectura de cuentos interactivos y dibujo libre con crayolas gruesas."
+            }
+        ];
+
+        function selectAge(index) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('bg-emerald-600', 'text-white');
+                    tab.classList.remove('bg-slate-700', 'text-slate-300');
+                } else {
+                    tab.classList.remove('bg-emerald-600', 'text-white');
+                    tab.classList.add('bg-slate-700', 'text-slate-300');
+                }
+            });
+
+            const data = demoData[index];
+            const display = document.getElementById('app-display');
+            display.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 text-sm mb-3 flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4"></i> Hitos Principales (${data.age})
+                        </h4>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            ${data.milestones.map(m => `<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>${m}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-700">
+                        <h4 class="font-bold text-teal-400 text-sm mb-3 flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i> Ejercicio de Estimulación Recomendado
+                        </h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">${data.activity}</p>
+                    </div>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        // Initialize with first tab
+        selectAge(0);
+
+        // Simple Countdown Timer
+        let time = 899; // 14:59
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            const minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timerElement.textContent = `${minutes}:${seconds}`;
+            if (time > 0) time--;
+        }, 1000);
+    </script>
+</body>
+</html>
